@@ -31,7 +31,7 @@
             "type": "bool"
         },
         "redisDeploySwitch": {
-            "defaultValue": false,
+            "defaultValue": true,
             "metadata": {
                 "description": "Switch to deploy a redis cache or not. Note that certain versions of Moodle (e.g., 3.1) don't work well with Redis, so use this only for known well-working Moodle versions (e.g., 3.4)."
             },
@@ -140,7 +140,7 @@
             "type": "string"
         },
         "sshUsername": {
-            "defaultValue": "mooodleadmin",
+            "defaultValue": "moodleadmin",
             "metadata": {
                 "description": "ssh user name"
             },
@@ -506,7 +506,7 @@
             "type": "string"
         },
         "searchType": {
-            "defaultValue": "none",
+            "defaultValue": "azure",
             "allowedValues": [
                 "none",
                 "azure",
@@ -1171,7 +1171,7 @@
             "postgresVersion": "[parameters('postgresVersion')]",
             "redisCacheName": "c0110prodredis01",
             "redisDeploySwitch": "[parameters('redisDeploySwitch')]",
-            "redisDns": "[concat('redis-',variables('resourceprefix'),'.redis.cache.windows.net')]",
+            "redisDns": "c0110prodredis01.redis.cache.windows.net",
             "resourcesPrefix": "[variables('resourceprefix')]",
             "searchType": "[parameters('searchType')]",
             "serverName": "[parameters('dbServerName')]",
