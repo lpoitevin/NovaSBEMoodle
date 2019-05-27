@@ -147,7 +147,7 @@
             "type": "string"
         },
         "controllerVmSku": {
-            "defaultValue": "Standard_D2s_v3",
+            "defaultValue": "Standard_D4s_v3",
             "metadata": {
                 "description": "VM size for the controller VM"
             },
@@ -1167,7 +1167,7 @@
             "redisDns": "[concat('redis-',variables('resourceprefix'),'.redis.cache.windows.net')]",
             "resourcesPrefix": "[variables('resourceprefix')]",
             "searchType": "[parameters('searchType')]",
-            "serverName": "[concat(parameters('dbServerType'), '-',variables('resourceprefix'))]",
+            "serverName": "c0110proddb02",
             "siteURL": "[if(or(empty(parameters('siteURL')), equals(parameters('siteURL'), 'www.example.org')), concat(if(equals(parameters('httpsTermination'), 'AppGw'),'appgw-','lb-'),variables('resourceprefix'),'.',parameters('location'),'.cloudapp.azure.com'), parameters('siteURL'))]",
             "sshPublicKey": "[parameters('sshPublicKey')]",
             "sshUsername": "[parameters('sshUsername')]",
