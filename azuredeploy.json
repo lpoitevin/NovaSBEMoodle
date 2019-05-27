@@ -197,6 +197,7 @@
             "type": "string"
         },
         "dbServerName": {
+            "defaultValue": "c0110proddb02",
             "metadata": {
                 "description": "Database server name"
             },
