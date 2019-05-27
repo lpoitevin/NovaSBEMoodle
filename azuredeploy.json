@@ -499,7 +499,7 @@
             "type": "string"
         },
         "searchType": {
-            "defaultValue": "azure",
+            "defaultValue": "none",
             "allowedValues": [
                 "none",
                 "azure",
