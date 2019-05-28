@@ -78,7 +78,7 @@
             },
             "fileServerProfile": {
                 "type": "[parameters('moodleCommon').fileServerType]",
-                "nfsVmName": "[parameters('moodleCommon').ctlrVmName]",
+                "nfsVmName": "[concat(parameters('moodleCommon').ctlrVmName, '.fe.unl.pt')]",
                 "glusterVmName": "[concat(parameters('moodleCommon').gfsNameRoot, '0')]",
                 "glusterVolName": "data",
                 "nfsByoIpExportPath": "[parameters('moodleCommon').nfsByoIpExportPath]",
