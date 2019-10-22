@@ -113,7 +113,7 @@
             "type": "string"
         },
         "moodleVersion": {
-            "allowedValues": [
+            "allowedValues": [   
                 "MOODLE_36_STABLE",
                 "MOODLE_35_STABLE",
                 "MOODLE_34_STABLE",
@@ -215,7 +215,7 @@
             "type": "string"
         },
         "dbLogin": {
-            "defaultValue": "dbadmin",
+            "defaultValue": "mysqladmin",
             "metadata": {
                 "description": "Database admin username"
             },
@@ -505,7 +505,7 @@
             "type": "string"
         },
         "searchType": {
-            "defaultValue": "none",
+            "defaultValue": "azure",
             "allowedValues": [
                 "none",
                 "azure",
@@ -528,7 +528,7 @@
             "type": "string"
         },
         "azureSearchSku": {
-            "defaultValue": "basic",
+            "defaultValue": "standard",
             "allowedValues": [
                 "free",
                 "basic",
@@ -1183,9 +1183,9 @@
             "subnetAppGw": "[concat('appgw-subnet-',variables('resourceprefix'))]",
             "subnetAppGwPrefix": "[concat(variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),6)))]",
             "subnetAppGwRange": "[concat(variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),6)), '.0/24')]",
-            "subnetElastic": "[concat('elastic-subnet-',variables('resourceprefix'))]",
-            "subnetElasticPrefix": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),5)))]",
-            "subnetElasticRange": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),5)), '.0/24')]",
+            "subnetElastic": "prod-be",
+            "subnetElasticPrefix": "10.2.2",
+            "subnetElasticRange": "10.2.2.0/24",
             "subnetGateway": "GatewaySubnet",
             "subnetGatewayPrefix": "[concat(variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),4)))]",
             "subnetGatewayRange": "[concat(variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),4)), '.0/24')]",
