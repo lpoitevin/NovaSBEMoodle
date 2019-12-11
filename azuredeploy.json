@@ -1090,7 +1090,7 @@
             "dbLogin": "[parameters('dbLogin')]",
             "dbLoginPassword": "[concat(substring(uniqueString(resourceGroup().id, deployment().name), 2, 11), '*7', toUpper('pfiwb'))]",
             "dbServerType": "[parameters('dbServerType')]",
-            "dbUsername": "[concat(parameters('dbLogin'), '@', parameters('dbServerName'))]",
+            "dbUsername": "[concat(parameters('moodleCommon').dbLogin, '@', variables('servername')",
             "ddosPlanName": "[concat('ddos-plan-',variables('resourceprefix'))]",
             "ddosSwitch": "[parameters('ddosSwitch')]",
             "elasticVmSku": "[parameters('elasticVmSku')]",
